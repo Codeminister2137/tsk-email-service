@@ -6,6 +6,7 @@ authors = ["Codeminister2137 <kubajaworski99@wp.pl>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+Django = "^5.1.5"
 
 [tool.poetry.dev-dependencies]
 
