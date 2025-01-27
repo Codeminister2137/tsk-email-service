@@ -51,7 +51,7 @@ python-versions = ">=3.8"
 
 [[package]]
 name = "tzdata"
-version = "2024.2"
+version = "2025.1"
 description = "Provider of IANA time zone data"
 category = "main"
 optional = false
