@@ -1,6 +1,9 @@
 import os
 from celery import Celery
 
+# Remember poetry run celery -A src worker -l info
+#
+
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'src.settings')
 app = Celery('src')
 app.config_from_object('django.conf:settings', namespace='CELERY')
