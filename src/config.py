@@ -9,6 +9,4 @@ class ProjectSettings(BaseSettings):
     mail_adress: str
     mail_password: str
 
-    model_config = {
-        "env_file" : "src/.env"
-    }
+    model_config = {"env_file": "src/.env"}
