@@ -147,24 +147,9 @@ LOGGING = {
         "console": {
             "class": "logging.StreamHandler",
         },
-        "mail_admins": {
-            "level": "DEBUG",
-            "include_html": True,
-            "class": "django.utils.log.AdminEmailHandler",
-        },
     },
+    "root": {"handlers": ["console"], "level": "DEBUG"},
     "loggers": {
-        "django": {
-            "handlers": ["console"],
-            "level": "INFO",
-            "propagate": True,
-        },
-    },
-    "formatters": {
-        "django.server": {
-            "()": "django.utils.log.ServerFormatter",
-            "format": "[{server_time}] {message}",
-            "style": "{",
-        }
+        "celery": {"handlers": ["console"], "level": "INFO", "propagate": True}
     },
 }
