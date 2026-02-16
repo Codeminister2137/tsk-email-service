@@ -60,12 +60,6 @@ poetry install
 
 ## Configuration
 
-Create a `.env` file based on the example:
-
-```sh
-cp .env.example .env
-```
-
 Configure environment variables such as:
 
 * SMTP host, port
