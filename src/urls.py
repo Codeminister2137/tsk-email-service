@@ -22,4 +22,5 @@ from email_api import views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("email/", views.send_email_view),
+    path("test/", views.logger_test_view),
 ]
