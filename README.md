@@ -14,7 +14,6 @@ TSK Email Service is part of a microservices ecosystem that together implements 
 
 * **Auth Service** — authentication and user identity
 * **Calendar Service** — scheduling tasks and reminders
-* **Main Orchestrator** — overall application composition
 
 The calendar service or other clients send email requests to this service, which enqueues and sends them reliably.
 
