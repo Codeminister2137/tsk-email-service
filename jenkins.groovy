@@ -39,6 +39,21 @@ pipeline {
             }
         }
 
+        stage('Use Credentials') {
+            steps {
+                withCredentials([usernamePassword(
+                    credentialsId: '2c2436c9-9f92-4c8c-b604-8cc288c69255',
+                    usernameVariable: 'USERNAME',
+                    passwordVariable: 'PASSWORD'
+                )]) {
+                    sh '''
+                        echo "Username: $USERNAME"
+                        echo "Password: $PASSWORD"
+                    '''
+                }
+            }
+        }
+
         stage('Run app') {
             steps {
                 sh '''
