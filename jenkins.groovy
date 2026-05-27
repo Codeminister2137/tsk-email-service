@@ -39,12 +39,19 @@ pipeline {
             }
         }
 
-        stage('Run app') {
-            steps {
-                sh '''
-                poetry run python manage.py runserver
-                '''
-            }
+
+    }
+    post {
+        success {
+            echo 'Pipeline completed successfully!'
+        }
+
+        failure {
+            echo 'Pipeline failed!'
+        }
+
+        always {
+            cleanWs()
         }
     }
 }
