@@ -6,7 +6,7 @@ from pydantic_settings import BaseSettings
 
 class ProjectSettings(BaseSettings):
     secret_key: str = Field(default_factory=get_random_secret_key)
-    mail_adress: str
-    mail_password: str
+    mail_adress: str | None = None
+    mail_password: str | None = None
 
     model_config = {"env_file": "src/.env"}
