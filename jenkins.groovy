@@ -43,12 +43,12 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(
                     credentialsId: '2c2436c9-9f92-4c8c-b604-8cc288c69255',
-                    usernameVariable: 'USERNAME',
-                    passwordVariable: 'PASSWORD'
+                    usernameVariable: 'MAIL_ADRESS',
+                    passwordVariable: 'MAIL_PASSWORD'
                 )]) {
                     sh '''
-                        echo "Username: $USERNAME"
-                        echo "Password: $PASSWORD"
+                        echo "Username: $MAIL_USERNAME"
+                        echo "Password: $MAIL_PASSWORD"
                     '''
                 }
             }
